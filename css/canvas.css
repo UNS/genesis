@@ -1,0 +1,13 @@
+/* 
+    Document   : canvas
+    Created on : Apr 19, 2013, 11:20:54 PM
+    Author     : remal
+    Description:
+        Purpose of the stylesheet follows.
+*/
+* { margin:0; padding:0; } 
+
+html, body { display:block;width:100%; height:100%; } 
+
+canvas { display:block; }
+
