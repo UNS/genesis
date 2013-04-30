@@ -53,7 +53,7 @@
 		ctx.fillText("BC = " + BC.dis(), 500, 120);
 		ctx.fillText("alpha = " + 180 * alpha / Math.PI, 500, 150);
 		ctx.fillText("beta = " + 180 * beta / Math.PI, 500, 180);
-		ctx.fillText("gama = " + 180 * gama / Math.PI, 500, 210);
+		ctx.fillText("gamma = " + 180 * gama / Math.PI, 500, 210);
 		ctx.fillText("BC 1 = " + BC_1, 200, 240);
 		ctx.fillText("BC 2 = " + BC_2, 200, 270);
 	};
@@ -76,7 +76,6 @@
 				return a1 * a2;
 			}, ordered: false, args: [{}, {}]}
 	];
-
 
 	var Fun = function(op, values) {
 		this.op = op;
@@ -109,7 +108,6 @@
 		this.ops = op;
 		this.value = value;
 	};
-
 
 	FunFactory.prototype.forEach = function(callback, thisArg) {
 		for (var k = 0; k < this.ops.length; k++) {
@@ -146,10 +144,7 @@
 									);
 								break;
 							case "var" :
-								var fun = new Fun(this.ops[k], [{
-										type: "var",
-										argNum: 0
-									}]);
+								var fun = new Fun(this.ops[k], this.value[i]);
 								callback.call(
 									thisArg,
 									fun
